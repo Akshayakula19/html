@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Montagu+Slab:wght@600&family=Montserrat:ital,wght@0,100;1,500;1,600&family=Poppins:wght@200;300;500&family=Sigmar&family=Ubuntu&display=swap');
+
+/*fonts{
+    font-family: 'Bruno Ace SC', cursive;
+    font-family: 'Montagu Slab', serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Sigmar', cursive;
+    font-family: 'Ubuntu', sans-serif;
+}
+*/
+
+:root {
+    --primary-color: #000000;
+    --secondary-color: #FFFFFF;
+
+    --inter: "Inter", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    font-family: var(--inter);
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 6.25rem;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+
+#navcursor {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--secondary-color);
+    transition: 0.1s;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    mix-blend-mode: difference;
+    z-index: 10001;
+}
+
+h1:hover+#navcursor {
+    transform: scale(3);
+}
+
+.brand-time p {
+    margin: 0;
+    padding: 0;
+    font-family: var(--inter);
+    display: inline-block;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.home .col-12 img,
+svg {
+    vertical-align: bottom;
+}
+
+
+
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+/* SERVICES SECTION */
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+
+
+.service .accordion-item {
+    color: var(--secondary-color) !important;
+    background-color: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    border-bottom: 1px solid var(--secondary-color) !important;
+}
+
+.service .accordion-header {
+    color: var(--secondary-color) !important;
+    background-color: transparent !important;
+    border: none !important;
+    /* border-bottom: 1px solid var(--secondary-color) !important; */
+}
+
+.service .accordion-button {
+    color: var(--secondary-color) !important;
+    background-color: transparent !important;
+    border: none !important;
+    /* border-bottom: 1px solid var(--primary-color) !important; */
+}
+
+.service .accordion-header button {
+    background: none;
+    padding: 51px 64px 51px 0;
+    color: var(--secondary-color);
+    font-size: 30px;
+    line-height: 28px;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: none !important;
+}
+
+.service .accordion-body p {
+    font-size: 22px;
+    line-height: 29px;
+    font-weight: 500;
+    font-family: var(--font_inter_tight);
+    letter-spacing: 0.2px;
+    margin-bottom: 18px;
+}
+
+.service .accordion-body {
+    margin-bottom: 20px;
+}
+
+.service .accordion-body ul li {
+    list-style: none;
+}
+
+.service .accordion-body .theme-btn {
+    font-size: 16px;
+    line-height: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border-radius: 3px;
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    transition: .5s;
+    -webkit-transition: .5s;
+}
+
+
+.service .accordion-button::after {
+    flex-shrink: 0;
+    margin-left: auto;
+    content: "\2b";
+    font-family: "fontawesome";
+    background-image: none !important;
+}

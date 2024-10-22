@@ -1,0 +1,57 @@
+@media (max-width: 500px) {
+    header img {
+        width: 60% !important;
+    }
+
+    .toggle {
+        margin: 0;
+        width: 46.48px;
+        height: 46.48px;
+    }
+
+    h1 {
+        font-size: 3.25rem !important;
+    }
+
+    header ul {
+        margin-left: 0 !important;
+    }
+
+    header ul li a {
+        margin-top: -28px !important;
+        font-size: 4.25rem !important;
+    }
+
+    header .brand-time .row .col-lg-3:nth-child(2),
+    header .brand-time .row .col-lg-3:nth-child(3){
+        display: none;
+    }
+
+}
+
+@media (min-width: 501px) and (max-width: 767px) {
+    header img {
+        width: 30% !important;
+    }
+
+    .toggle {
+        margin: 0;
+        margin-top: -12%;
+        width: 46.48px;
+        height: 46.48px;
+    }
+
+    h1 {
+        font-size: 3.25rem !important;
+    }
+
+    header ul {
+        margin-left: 0 !important;
+    }
+
+    header ul li a {
+        margin-top: -28px !important;
+        font-size: 4.25rem !important;
+    }
+
+}
