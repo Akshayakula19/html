@@ -29,10 +29,20 @@
 </head>
 
 <body>
+    <!-- <div id="loading" class="loading-overlay">
+        <div class="loader"><img src="Assets/Images/signature-gif.gif" alt="" style="width: 100%;"></div>
+    </div>
 
-    <audio id="playAudio" src="pla.mp3"></audio>
+    <div id="content" style="display: none;">
+
+
+    </div> -->
+
+    <!-- <audio id="playAudio" src="play.mp3"></audio> -->
     <div id="bodyTop">Top</div>
     <div id="navcursor"></div>
+
+
 
     <header id="header">
         <nav class="brand-time" style="display: flex; align-content: center;">
@@ -69,7 +79,7 @@
 
     <main>
         <!-- HOME SECTION START -->
-        <section class="home content" style="height: 100vh;">
+        <section class="home content" style="height: 150vh;">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6">
@@ -79,8 +89,9 @@
                         <img src="" alt="" style="width: 100%;">
                     </div>
                     <div class="col-12">
-                        <h1 style="font-size: 150px; font-weight: 700; line-height: 135px;">Web <img
-                                src="Assets/Images/Icons/white-circle-shape.svg" alt=""><span>Developer</span></h1>
+                        <h1 style="font-size: 9.375rem; font-weight: 700;">Web</h1><br>
+                        <h1 id="developer-txt" style="font-size: 9.375rem; font-weight: 700; line-height: 4.375rem;">
+                            Developer</h1>
                     </div>
                 </div>
 
@@ -129,7 +140,8 @@
                             <div class="accordion-body">
                                 <div class="row">
                                     <div class="col-lg-6">
-                                        <p>Blending Aesthetic and Innovation, My UX/UI gives you a Top Notch Client.</p>
+                                        <p>Blending Aesthetic and Innovation, My UX/UI gives you a Top Notch Client.
+                                        </p>
                                         <br>
                                         <p>Starts At <u>Cost® — $2000</u> </p>
                                         <br>
@@ -170,7 +182,8 @@
                             <div class="accordion-body">
                                 <div class="row">
                                     <div class="col-lg-6">
-                                        <p>Blending Aesthetic and Innovation, My UX/UI gives you a Top Notch Client.</p>
+                                        <p>Blending Aesthetic and Innovation, My UX/UI gives you a Top Notch Client.
+                                        </p>
                                         <br>
                                         <p>Starts At <u>Cost® — $2000</u> </p>
                                         <br>
@@ -211,7 +224,8 @@
                             <div class="accordion-body">
                                 <div class="row">
                                     <div class="col-lg-6">
-                                        <p>Blending Aesthetic and Innovation, My UX/UI gives you a Top Notch Client.</p>
+                                        <p>Blending Aesthetic and Innovation, My UX/UI gives you a Top Notch Client.
+                                        </p>
                                         <br>
                                         <p>Starts At <u>Cost® — $2000</u> </p>
                                         <br>
@@ -283,16 +297,28 @@
     <!-- FOOTER SECTION END -->
 
 
-    <!-- jquery js  -->
-    <script src="jquery.js"></script>
-    <script src="gsap.js"></script>
-    <script src="navbar.js"></script>
-    <script src="app.js"></script>
+
 
     <!-- BOOTSTRAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"
         integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+    <!-- jquery js  -->
+
+    <script src="jquery.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+
+    <!-- GSAP -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+    <!-- SCROLLTRIGGER -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+    <script src="navbar.js"></script>
+    <script src="app.js"></script>
+
 </body>
 
 </html>

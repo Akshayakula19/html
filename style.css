@@ -32,6 +32,28 @@ body {
     background: var(--primary-color);
     color: var(--secondary-color);
     font-family: var(--inter);
+    scroll-behavior: smooth;
+
+}
+
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999999;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.loading-overlay.hidden {
+    opacity: 0;
+    pointer-events: none;
 }
 
 h1 {
@@ -70,12 +92,51 @@ h1:hover+#navcursor {
     font-size: 16px;
 }
 
-.home .col-12 img,
-svg {
-    vertical-align: bottom;
+.home{
+    height: 150vh;
 }
 
+.home h1:first-child {
+    position: relative;
+    display: inline-block;
+}
 
+.home h1:first-child:before {
+    content: '';
+    background: url(Assets/Images/Icons/white-circle-shape.svg);
+    width: 41px;
+    height: 22px;
+    position: absolute;
+    bottom: 40px;
+    right: -50px;
+}
+
+.home h1:last-child {
+    position: relative;
+    display: inline-block;
+    clip-path: polygon(0 -30%, 105% -110%, 115% 130%, 0% 130%);
+}
+
+.home h1:last-child:before {
+    content: '';
+    background: rgb(0, 153, 255);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 40px;
+    right: -25px;
+    z-index: -1;
+}
+
+/* .home .char {
+    transform: translateY(115px);
+    transition: transform .5s;
+} */
+
+.home .col-12:last-child{
+    margin-top: 150px;
+}
 
 /* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
 /* SERVICES SECTION */
