@@ -59,6 +59,7 @@ body {
 h1 {
     text-transform: uppercase;
     font-size: 6.25rem;
+    font-weight: 700;
 }
 
 a {
@@ -92,8 +93,27 @@ h1:hover+#navcursor {
     font-size: 16px;
 }
 
-.home{
-    height: 150vh;
+.home {
+    height: 100vh;
+    margin-bottom: 150px;
+}
+
+.portfolio,
+.about,
+.service,
+.testimonial,
+.faq,
+.contact {
+    padding-top: 60px;
+}
+
+.portfolio h1,
+.about h1,
+.service h1,
+.testimonial h1,
+.faq h1,
+.contact h1 {
+    clip-path: polygon(0 -30%, 105% -110%, 115% 115%, 0% 115%);
 }
 
 .home h1:first-child {
@@ -129,12 +149,22 @@ h1:hover+#navcursor {
     z-index: -1;
 }
 
-/* .home .char {
+.home .char {
     transform: translateY(115px);
-    transition: transform .5s;
-} */
+    transition: transform 0.5s;
+}
 
-.home .col-12:last-child{
+.portfolio .char,
+.about .char,
+.service .char,
+.testimonial .char,
+.faq .char,
+.contact .char {
+    transform: translateY(115px);
+    transition: transform 1s;
+}
+
+.home .col-12:last-child {
     margin-top: 150px;
 }
 
