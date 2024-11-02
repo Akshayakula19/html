@@ -186,3 +186,53 @@
     }
 
 }
+
+
+@media (max-width: 768px) {
+    .portfolio .selected-work {
+        font-size: 2.5rem;
+    }
+
+    .portfolio .portfolio-image {
+        height: 300px;
+    }
+
+    .portfolio .project-title {
+        font-size: 1.5rem;
+    }
+
+    .about {
+        padding: 40px 0;
+    }
+
+    .marquee-stacks .logo {
+        width: 3.375rem;
+        margin: 0 20px;
+    }
+
+
+    .experience .experience-header {
+        font-size: 2.5rem;
+    }
+
+    /* .experience-section {
+        padding: 40px 0;
+    } */
+
+    .experience .experience-item {
+        padding: 1.5rem 0;
+    }
+
+
+    .stack .stack-header {
+        font-size: 2.5rem;
+    }
+
+    .stack .stack-section {
+        padding: 40px 0;
+    }
+
+    .stack .stack-item {
+        padding: 1.5rem 0;
+    }
+}

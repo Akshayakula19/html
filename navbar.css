@@ -105,7 +105,7 @@ header ul li a {
     color: var(--primary-color);
     transition: 0.2s;
     font-size: 6.25rem;
-    font-family: 'Bruno Ace SC', cursive;
+    font-family: "Bruno Ace SC", serif;
 }
 
 #cursor {
@@ -166,7 +166,7 @@ header ul li a {
     opacity: 0;
 }
 
-#header{
+#header {
     position: fixed;
     width: 100vw;
 }
@@ -232,4 +232,48 @@ header ul li a {
     100% {
         transform: translateY(0);
     }
+}
+
+
+
+
+.menu-item {
+    position: relative;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.menu-item-text {
+    pointer-events: none;
+    display: block;
+    line-height: 1;
+    position: relative;
+    font-size: 2rem;
+}
+
+.menu-item>div:nth-child(1) span {
+    will-change: transform;
+    transform-style: preserve-3d;
+    transition: 0.5s;
+    transition-delay: calc(0.05s * var(--index));
+    transform-origin: bottom;
+    display: inline-block;
+}
+
+.menu-item>div:nth-child(2) span {
+    will-change: transform;
+    transform-style: preserve-3d;
+    transition: 0.5s;
+    transition-delay: calc(0.05s * var(--index));
+    transform-origin: top;
+    display: inline-block;
+    transform: translate3d(0, 100%, 0) rotateX(-90deg);
+}
+
+.menu-item:hover>div:nth-child(1) span {
+    transform: translate3d(0, -100%, 0) rotateX(-90deg);
+}
+
+.menu-item:hover>div:nth-child(2) span {
+    transform: translate3d(0, 0%, 0) rotateX(0deg);
 }

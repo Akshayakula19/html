@@ -1,14 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Montagu+Slab:wght@600&family=Montserrat:ital,wght@0,100;1,500;1,600&family=Poppins:wght@200;300;500&family=Sigmar&family=Ubuntu&display=swap');
-
-/*fonts{
-    font-family: 'Bruno Ace SC', cursive;
-    font-family: 'Montagu Slab', serif;
-    font-family: 'Montserrat', sans-serif;
-    font-family: 'Poppins', sans-serif;
-    font-family: 'Sigmar', cursive;
-    font-family: 'Ubuntu', sans-serif;
-}
-*/
+/* 
+@import url('~lucide-static/font/Lucide.css'); */
 
 :root {
     --primary-color: #000000;
@@ -67,22 +58,19 @@ a {
 }
 
 
-#navcursor {
+.cursor {
     position: fixed;
     width: 40px;
     height: 40px;
     border-radius: 50%;
     background: var(--secondary-color);
-    transition: 0.1s;
     transform: translate(-50%, -50%);
     pointer-events: none;
     mix-blend-mode: difference;
     z-index: 10001;
+    transition: transform 0.2s ease;
 }
 
-h1:hover+#navcursor {
-    transform: scale(3);
-}
 
 .brand-time p {
     margin: 0;
@@ -90,7 +78,7 @@ h1:hover+#navcursor {
     font-family: var(--inter);
     display: inline-block;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .home {
@@ -103,8 +91,10 @@ h1:hover+#navcursor {
 .service,
 .testimonial,
 .faq,
-.contact {
-    padding-top: 60px;
+.contact,
+.experience,
+.stacks {
+    padding: 6.5% 0;
 }
 
 .portfolio h1,
@@ -112,7 +102,9 @@ h1:hover+#navcursor {
 .service h1,
 .testimonial h1,
 .faq h1,
-.contact h1 {
+.contact h1,
+.experience h1,
+.stacks h1 {
     clip-path: polygon(0 -30%, 105% -110%, 115% 115%, 0% 115%);
 }
 
@@ -159,14 +151,240 @@ h1:hover+#navcursor {
 .service .char,
 .testimonial .char,
 .faq .char,
-.contact .char {
+.contact .char,
+.experience .char,
+.stacks .char {
     transform: translateY(115px);
     transition: transform 1s;
 }
 
-.home .col-12:last-child {
-    margin-top: 150px;
+.home #signature-gif{
+    transform: translateY(20%);
+    transition: transform 1s;
 }
+
+.home .col-12:last-child {
+    margin-top: 15%;
+}
+
+.section-label {
+    background: rgb(0, 153, 255);
+    padding: 3px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #000000;
+    text-transform: uppercase;
+    position: relative;
+    float: right;
+}
+
+.section-label::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: white;
+    position: absolute;
+    top: 50%;
+    left: -30px;
+    transform: translateY(-50%);
+}
+
+
+
+
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+/* WORKS SECTION */
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+
+.portfolio p {
+    font-size: 1.5rem;
+}
+
+.portfolio .row h1 {
+    margin-top: -12%;
+
+}
+
+.about .row h1 {
+    margin-top: -3%;
+}
+
+.portfolio .hero-section {
+    padding: 80px 0;
+}
+
+.portfolio .selected-work {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 2rem;
+}
+
+.portfolio .description {
+    opacity: 0.9;
+}
+
+.portfolio .portfolio-card {
+    position: relative;
+    margin-bottom: 30px;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.portfolio .portfolio-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.portfolio .card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+}
+
+.portfolio .project-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.portfolio .project-details {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.25rem;
+    /* opacity: 0.8; */
+}
+
+
+
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+/* ABOUT SECTION */
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+
+.about p,
+.about h2,
+.about span {
+    font-size: 1.25rem;
+}
+
+.about .profile-image {
+    width: 100%;
+}
+
+
+.about {
+    padding: 80px 0;
+    position: relative;
+}
+
+.about .subtitle {
+    margin-bottom: 2rem;
+}
+
+.about .profile-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.about .section-title {
+    margin-bottom: 1rem;
+}
+
+.about .achievement-item {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1rem 0;
+    transition: all 0.3s ease;
+    position: relative;
+
+}
+
+.about .achievement-item:after {
+    content: "";
+    background-image: url(Assets/Images/Icons/arrow.svg);
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    top: 50%;
+    right: 30%;
+    transform: translateY(-50%);
+}
+
+.about .achievement-item:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding-left: 1rem;
+    cursor: pointer;
+}
+
+.about .download-resume {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin-top: 2rem;
+}
+
+.about .download-resume:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+
+
+
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+/* MARQUEE STACKS SECTION */
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+
+.marquee-stacks .marquee {
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    position: relative;
+    padding: 10px 0;
+}
+
+.marquee-stacks .marquee-content {
+    display: inline-block;
+    animation: marquee 35s infinite linear;
+}
+
+.marquee-stacks .logo {
+    width: 9.375rem;
+    height: auto;
+    margin: 0 50px;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.marquee-stacks .logo:hover {
+    filter: grayscale(0%);
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+
 
 /* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
 /* SERVICES SECTION */
@@ -199,7 +417,7 @@ h1:hover+#navcursor {
     background: none;
     padding: 51px 64px 51px 0;
     color: var(--secondary-color);
-    font-size: 30px;
+    font-size: 1.875rem;
     line-height: 28px;
     font-weight: 600;
     text-transform: uppercase;
@@ -210,7 +428,7 @@ h1:hover+#navcursor {
 }
 
 .service .accordion-body p {
-    font-size: 22px;
+    font-size: 1.375rem;
     line-height: 29px;
     font-weight: 500;
     font-family: var(--font_inter_tight);
@@ -227,7 +445,7 @@ h1:hover+#navcursor {
 }
 
 .service .accordion-body .theme-btn {
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 20px;
     display: inline-flex;
     align-items: center;
@@ -249,4 +467,125 @@ h1:hover+#navcursor {
     content: "\2b";
     font-family: "fontawesome";
     background-image: none !important;
+}
+
+
+
+
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+/* EXPERIENCE SECTION */
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+
+.experience h2,
+.experience p {
+    font-size: 1.25rem;
+}
+
+.experience .subtitle {
+    margin-bottom: 4rem;
+}
+
+.experience .timeline-label {
+    display: inline-block;
+    padding: 4px 12px;
+    background-color: #00ff00;
+    color: #000;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.experience .experience-item {
+    padding: 2rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.experience .experience-item:last-child {
+    border-bottom: none;
+}
+
+.experience .company-logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 1rem;
+    object-fit: contain;
+}
+
+.experience .position-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.experience .company-name {
+    margin-bottom: 1rem;
+}
+
+.experience .description {
+    max-width: 600px;
+}
+
+
+
+
+
+
+
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+/* STACKS SECTION */
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+
+
+.stacks .stack-section {
+    position: relative;
+}
+
+.stacks .stack-header {
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+}
+
+.stacks .subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 4rem;
+}
+
+.stacks .stack-item {
+    padding: 2rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stacks .stack-item:last-child {
+    border-bottom: none;
+}
+
+.stacks .tool-logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 1rem;
+    object-fit: contain;
+}
+
+.stacks .tool-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    text-transform: uppercase;
+
+}
+
+.stacks .tool-category {
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.stacks .tool-percentage {
+    font-size: 1.25rem;
+}
+
+.stacks .description {
+    max-width: 600px;
+    font-size: 1.125rem;
 }
