@@ -83,18 +83,18 @@
 
     <main>
         <!-- HOME SECTION START -->
-        <section class="home content">
+        <section class="home">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6">
-                        <img id="signature-gif" src="Assets/Images/signature-gif.gif" alt="" style="width: 100%;">
+                        <img src="Assets/Images/signature-gif.gif" alt="" style="width: 100%; mix-blend-mode: screen;">
                     </div>
                     <div class="col-lg-6">
-                        <img src="" alt="" style="width: 100%;">
+                        <img src="Assets/Images/Icons/process-icon-2.svg" alt="" style="width: 80%;">
                     </div>
                     <div class="col-12">
-                        <h1 style="font-size: 9.375rem; font-weight: 700;">Web</h1><br>
-                        <h1 id="developer-txt" style="font-size: 9.375rem; font-weight: 700; line-height: 4.375rem;">
+                        <h1>Web</h1><br>
+                        <h1 id="developer-txt" style="line-height: 4.375rem;">
                             Developer</h1>
                     </div>
                 </div>
@@ -106,14 +106,14 @@
 
 
         <!-- WORK SECTION START -->
-        <section id="works" class="portfolio content">
+        <section id="works" class="portfolio">
             <div class="container">
                 <div class="hero-section ">
                     <div class="row align-items-center">
-                        <div class="col-md-6">
+                        <div class="col-lg-6">
                             <h1 id="text-work">WORKS</h1>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-lg-6">
                             <span class="section-label">explore</span><br>
                             <p class="description">
                                 Gorgeous design. Scroll-stopping content. Memorable
@@ -199,12 +199,13 @@
 
 
         <!-- ABOUT SECTION START -->
-        <section id="about" class="about content">
+        <section id="about" class="about">
             <div class="container">
                 <div class="row mb-4">
                     <div class="col-md-8">
                         <h1 id="text-about">ABOUT</h1>
-                        <p class="subtitle">JUNIOR WEB DEVELOPER PASSIONATE ABOUT CREATING MODERN WEB EXPERIENCES</p>
+                        <h5 class="subtitle">WEB DEV PASSIONATE ABOUT CREATING <u class="underlined">MODERN WEB
+                                EXPERIENCES</u></h5>
                     </div>
                     <div class="col-md-4 text-md-end">
                         <span class="section-label">let's work together</span><br>
@@ -235,16 +236,16 @@
                         <div class="mb-5">
                             <h2 class="section-title">[ CERTIFICATES ]</h2>
                             <div class="achievement-item">
-                                <span>Full Stack Web Development</span>
-                                <span>2023</span>
+                                <span>Web Design & Dev: Freelancing L3</span>
+                                <span>2024</span>
                             </div>
                             <div class="achievement-item">
-                                <span>JavaScript Advanced Concepts</span>
-                                <span>2023</span>
+                                <span>Python Development</span>
+                                <span>2024</span>
                             </div>
                             <div class="achievement-item">
-                                <span>Responsive Web Design</span>
-                                <span>2022</span>
+                                <span>Graphics Design: Freelancing L3</span>
+                                <span>2024</span>
                             </div>
                         </div>
 
@@ -260,7 +261,7 @@
                         </div>
 
                         <div class="text-end mt-4">
-                            <span class="text-muted">[ EST. 2022 ]</span>
+                            <span>[ SINCE. 2021 ]</span>
                         </div>
                     </div>
                 </div>
@@ -306,7 +307,7 @@
 
 
         <!-- SERVICES SECTION START -->
-        <section id="service" class="service content my-5">
+        <section id="service" class="service my-5">
             <div class="container">
                 <div class="row">
                     <div class="col-6">
@@ -316,10 +317,10 @@
                         <span class="section-label">discover</span>
                     </div>
                 </div>
-                <div class="accordion" id="accordionExample">
+                <!-- <div class="accordion" id="accordionExample"> -->
 
-                    <!-- WEB DEVELOPMENT -->
-                    <div class="accordion-item">
+                <!-- WEB DEVELOPMENT -->
+                <!-- <div class="accordion-item">
                         <h2 class="accordion-header" id="headingOne">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -357,11 +358,11 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
 
-                    <!-- WEB DESIGN -->
-                    <div class="accordion-item">
+                <!-- WEB DESIGN -->
+                <!-- <div class="accordion-item">
                         <h2 class="accordion-header" id="headingTwo">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
@@ -399,11 +400,11 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
 
-                    <!-- GRAPHICS DESIGN -->
-                    <div class="accordion-item">
+                <!-- GRAPHICS DESIGN -->
+                <!-- <div class="accordion-item">
                         <h2 class="accordion-header" id="headingThree">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
@@ -441,8 +442,12 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
+                <!-- </div> -->
+
+                <div id="services-accordion">
+                    <!-- Accordion items will be inserted here -->
                 </div>
             </div>
         </section>
@@ -450,26 +455,34 @@
 
 
 
+        <section class="pattern1">
+        </section>
+
+
         <!-- EXPERIENCE SECTION START -->
         <section class="experience">
             <div class="container experience-section">
-                <div class="d-flex justify-content-between align-items-start mb-4">
+                <div class="d-flex justify-content-between align-items-start">
                     <div>
                         <h1 id="text-experience">EXPERIENCE</h1>
-                        <p class="subtitle">SHOWCASING MY VISUAL DESIGNING JOURNEY</p>
+                        <p class="subtitle">SHOWCASING MY WEB DEVELOPMENT JOURNEY</p>
                     </div>
                     <span class="section-label">2022 - present</span>
                 </div>
 
                 <div class="experience-items">
                     <div class="experience-item">
-                        <div class="d-flex mb-3">
-                            <img src="https://www.google.com/favicon.ico" alt="Google" class="company-logo">
-                            <div>
-                                <h3 class="position-title">SENIOR VISUAL DESIGNER</h3>
-                                <p class="company-name">GOOGLE</p>
+                        <div class="row mb-3">
+                            <div class="col-8 d-flex">
+                                <img src="https://www.google.com/favicon.ico" alt="Google" class="company-logo">
+                                <div>
+                                    <h3 class="position-title">SENIOR VISUAL DESIGNER</h3>
+                                    <p class="company-name">GOOGLE</p>
+                                </div>
                             </div>
-                            <span class="date ms-auto">[ 2021 - PRESENT ]</span>
+                            <div class="col-4 text-end">
+                                <span class="date ms-auto">[ 2021 - PRESENT ]</span>
+                            </div>
                         </div>
                         <p class="description">Google inspires Creativity and makes learning more fun. This sleek,
                             lightweight
@@ -477,56 +490,75 @@
                     </div>
 
                     <div class="experience-item">
-                        <div class="d-flex mb-3">
-                            <img src="https://www.meta.com/favicon.ico" alt="Meta" class="company-logo">
-                            <div>
-                                <h3 class="position-title">SENIOR SOCIAL MEDIA DESIGNER</h3>
-                                <p class="company-name">META</p>
+                        <div class="row mb-3">
+                            <div class="col-8 d-flex">
+                                <img src="https://www.google.com/favicon.ico" alt="Google" class="company-logo">
+                                <div>
+                                    <h3 class="position-title">SENIOR VISUAL DESIGNER</h3>
+                                    <p class="company-name">GOOGLE</p>
+                                </div>
                             </div>
-                            <span class="date ms-auto">[ 2019 - 2020 ]</span>
+                            <div class="col-4 text-end">
+                                <span class="date ms-auto">[ 2021 - PRESENT ]</span>
+                            </div>
                         </div>
-                        <p class="description">Meta Focuses on Innovative Design for its Social media and Virtual
-                            reality
-                            products.</p>
+                        <p class="description">Google inspires Creativity and makes learning more fun. This sleek,
+                            lightweight
+                            body fits easily into Big bags for Portability.</p>
                     </div>
 
                     <div class="experience-item">
-                        <div class="d-flex mb-3">
-                            <img src="https://www.amazon.com/favicon.ico" alt="Amazon" class="company-logo">
-                            <div>
-                                <h3 class="position-title">JUNIOR VISUAL DESIGNER</h3>
-                                <p class="company-name">AMAZON</p>
+                        <div class="row mb-3">
+                            <div class="col-8 d-flex">
+                                <img src="https://www.google.com/favicon.ico" alt="Google" class="company-logo">
+                                <div>
+                                    <h3 class="position-title">SENIOR VISUAL DESIGNER</h3>
+                                    <p class="company-name">GOOGLE</p>
+                                </div>
                             </div>
-                            <span class="date ms-auto">[ 2017 - 2019 ]</span>
+                            <div class="col-4 text-end">
+                                <span class="date ms-auto">[ 2021 - PRESENT ]</span>
+                            </div>
                         </div>
-                        <p class="description">Amazon taught beautiful UI Design for its various platforms and devices.
-                            This
-                            made me to look more Deeper in Designing.</p>
+                        <p class="description">Google inspires Creativity and makes learning more fun. This sleek,
+                            lightweight
+                            body fits easily into Big bags for Portability.</p>
                     </div>
 
                     <div class="experience-item">
-                        <div class="d-flex mb-3">
-                            <img src="https://www.fiverr.com/favicon.ico" alt="Fiverr" class="company-logo">
-                            <div>
-                                <h3 class="position-title">FREELANCE WEB DESIGNER</h3>
-                                <p class="company-name">FIVERR</p>
+                        <div class="row mb-3">
+                            <div class="col-8 d-flex">
+                                <img src="https://www.google.com/favicon.ico" alt="Google" class="company-logo">
+                                <div>
+                                    <h3 class="position-title">SENIOR VISUAL DESIGNER</h3>
+                                    <p class="company-name">GOOGLE</p>
+                                </div>
                             </div>
-                            <span class="date ms-auto">[ 2014 - 2017 ]</span>
+                            <div class="col-4 text-end">
+                                <span class="date ms-auto">[ 2021 - PRESENT ]</span>
+                            </div>
                         </div>
-                        <p class="description">Bringing Creativity, Technical Expertise, and a passion for Design to
-                            every
-                            project.</p>
+                        <p class="description">Google inspires Creativity and makes learning more fun. This sleek,
+                            lightweight
+                            body fits easily into Big bags for Portability.</p>
                     </div>
+
                 </div>
             </div>
         </section>
         <!-- EXPERIENCE SECTION END -->
 
 
+
+        <section class="pattern">
+        </section>
+
+
+
         <!-- STACKS SECTION START -->
         <section class="stacks">
             <div class="container stack-section">
-                <div class="d-flex justify-content-between align-items-start mb-4">
+                <div class="d-flex justify-content-between align-items-start">
                     <div>
                         <h1 id="text-stack" class="stack-header">FAVOURITE<br>STACK</h1>
                         <p class="subtitle">EXPLORE MY CURATED TOP DESIGN PICKS</p>
@@ -639,11 +671,17 @@
 
 
 
+        <section class="pattern2">
+        </section>
+
 
         <!-- TESTIMONIAL SECTION START -->
-        <section id="testimonial" class="testimonial content" style="height: 100vh;">
-            <div class="container">
-                <h1 id="text-testimonial">TESTIMONIAL</h1>
+        <section id="testimonial" class="testimonial">
+            <div class="container testimonial-section">
+                <h2 id="text-testimonial" class="text-center">TESTIMONIAL</h2>
+                <h1 class="section-title">What my Clients Say</h1>
+                <div class="testimonial-row mb-5" id="row1"></div>
+                <div class="testimonial-row" id="row2"></div>
             </div>
         </section>
         <!-- TESTIMONAIL SECTION END -->
@@ -651,7 +689,7 @@
 
 
         <!-- FAQ SECTION START -->
-        <section id="faq" class="faq content" style="height: 100vh;">
+        <section id="faq" class="faq" style="height: 100vh;">
             <div class="container">
                 <h1 id="text-faq">FAQ</h1>
             </div>
@@ -661,9 +699,25 @@
 
 
         <!-- CONTACT SECTION START -->
-        <section id="contact" class="contact content" style="height: 100vh;">
+        <section id="contact" class="contact">
             <div class="container">
-                <h1 id="text-contact">CONTACT</h1>
+                <div class="row align-items-center mb-5">
+                    <div class="col-md-9 text-center">
+                        <h1 class="main-heading">LET'S BUILD YOUR<br>WEB IDENTITY</h1>
+                        <h6 class="subtitle">"COLLABORATE WITH ME TO CRAFT EXCEPTIONAL
+                            DESIGNS<br>REFLECT YOUR UNIQUE VISION"</h6>
+                        <button class="contact-btn">CONTACT NOW</button>
+                        <div class="social-container">
+                            <a href="#" class="social-icon">INSTAGRAM</a><img src="Assets/Images/Icons/arrow.svg"
+                                alt="">
+                            <a href="#" class="social-icon">LINKEDIN</a><img src="Assets/Images/Icons/arrow.svg" alt="">
+                            <a href="#" class="social-icon">FACEBOOK</a><img src="Assets/Images/Icons/arrow.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <img src="Assets/Images/Icons/process-icon-1.svg" alt="Designer Profile" class="profile-image">
+                    </div>
+                </div>
             </div>
         </section>
         <!-- CONTACT SECTION END -->
@@ -671,9 +725,25 @@
 
 
     <!-- FOOTER SECTION START -->
-    <footer id="footer" class="footer content" style="height: 100vh;">
+    <footer id="footer" class="footer">
         <div class="container">
-            <h1 id="text-footer">Kishan</h1>
+            <div class="footer-section">
+                <div class="brand-container">
+                    <div class="brand-text">kishan</div>
+                    <div class="green-circle"></div>
+                </div>
+
+                <div class="container p-0">
+                    <div class="row footer-row justify-content-between align-items-center">
+                        <div class="col-auto">
+                            <div class="footer-text">© 2024 DESIGN</div>
+                        </div>
+                        <div class="col-auto">
+                            <div class="footer-text">Dhaka, Bangladesh</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
     <!-- FOOTER SECTION END -->
@@ -681,13 +751,13 @@
 
 
 
-    <!-- BOOTSTRAP -->
 
 
 
     <!-- jquery js  -->
     <script src="jquery.js"></script>
 
+    <!-- BOOTSTRAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"
         integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -698,6 +768,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
 
     <script src="navbar.js"></script>
+    <script src="service-section.js"></script>
+    <script src="testimonial.js"></script>
     <script src="app.js"></script>
 </body>
 
