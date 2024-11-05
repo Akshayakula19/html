@@ -3,7 +3,7 @@
     --h1-font-size: clamp(3.5rem, 5vw, 9.375rem);
     --circle-size: clamp(3.125rem, 10vw, 6.25rem);
     --toggle-size: clamp(2.5rem, 5vw, 2.9rem);
-    --logo-size: clamp(2rem, 5vw, 3.375rem);
+    --logo-size: clamp(3rem, 5vw, 3.375rem);
 }
 
 @media (max-width: 767px) {
@@ -148,6 +148,10 @@
         margin: 0 1.25rem;
     }
 
+    .marquee-stacks .logo {
+        filter: grayscale(0%);
+    }
+
 
 
     .experience .section-label,
@@ -191,6 +195,16 @@
 
     .contact .social-container img {
         width: 3%;
+    }
+
+    
+
+    header .social-container img:last-child {
+        margin-right: 0px;
+    }
+
+    header .social-container img {
+        width: 2.6%;
     }
 }
 
