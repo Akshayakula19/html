@@ -1,6 +1,7 @@
 :root {
     --primary-color: #000000;
     --secondary-color: #FFFFFF;
+    --third-color: rgb(0, 153, 255);
     --inter: "Inter", sans-serif;
     --font-inter-tight: var(--inter);
 }
@@ -106,48 +107,51 @@ a {
 }
 
 .home .row {
-    padding-top: 7%;
+    padding-top: 10%;
 }
 
 .home .col-lg-6 {
     text-align: center;
-}
-
-.home .col-12 h1 {
-    font-size: 9.375rem;
-    font-weight: 700;
-}
-
-.home h1:first-child {
     position: relative;
-    display: inline-block;
 }
 
-.home h1:first-child:before {
+.home .col-lg-6:last-child {
+    text-align: right;
+}
+
+.home h1 {
+    font-size: 9rem;
+    font-weight: 700;
+    text-align: left;
+    margin-top: -20%;
+    position: relative;
+}
+
+.home h1:before {
     content: '';
     background: url(../Images/Icons/white-circle-shape.svg);
     width: 41px;
     height: 22px;
     position: absolute;
-    bottom: 40px;
-    right: -50px;
+    bottom: 35px;
+    left: 21rem;
 }
 
-.home h1:last-child {
-    position: relative;
-    display: inline-block;
-    clip-path: polygon(0 -30%, 105% -110%, 115% 130%, 0% 130%);
+.home p {
+    font-size: 8rem;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
-.home h1:last-child:before {
+.home p:before {
     content: '';
-    background: rgb(0, 153, 255);
+    background: var(--third-color);
     width: 100px;
     height: 100px;
     border-radius: 50%;
     position: absolute;
-    bottom: 40px;
-    right: -25px;
+    bottom: 7%;
+    right: -14%;
     z-index: -1;
 }
 
@@ -196,6 +200,75 @@ a {
     left: -30px;
     transform: translateY(-50%);
 }
+
+
+/* SCROLL INDICATOR */
+.scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+
+/* ROLE TEXT */
+.rotating-text {
+    color: white;
+    font-family: var(--font-inter-tight);
+}
+
+.rotating-text p {
+    margin: 0;
+    margin-top: -4rem;
+    vertical-align: top;
+}
+
+.rotating-text p .word {
+    position: absolute;
+    display: flex;
+    opacity: 0;
+}
+
+.rotating-text p .word .letter {
+    transform-origin: center center 50px;
+}
+
+.rotating-text p .word .letter.out {
+    transform: rotateX(90deg);
+    transition: 0.32s cubic-bezier(0.6, 0, 0.7, 0.2);
+}
+
+.rotating-text p .word .letter.in {
+    transition: 0.38s ease;
+}
+
+.rotating-text p .word .letter.behind {
+    transform: rotateX(-90deg);
+}
+
+.rotating-text p .w-2,
+.rotating-text p .w-3,
+.rotating-text p .w-1 {
+    font-size: clamp(3rem, 5vw + 2rem, 7rem);
+}
+
+
+
+
 
 
 
@@ -719,7 +792,7 @@ a {
     font-size: 1rem;
     font-weight: 600;
     transition: all 0.3s ease;
-    margin-bottom: 5rem;
+    margin-bottom: 5rem !important;
 }
 
 .contact .social-icon {
@@ -744,6 +817,7 @@ a {
     flex-wrap: wrap;
     align-items: baseline;
     justify-content: center;
+    margin-top: 4rem;
 }
 
 .contact .social-container img {
@@ -833,4 +907,109 @@ a {
     background-repeat: repeat;
     background-size: 55px 55px;
     transition: background-size 0.3s ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+/* CONTACT PAGE */
+
+.contact-page h1 {
+    font-size: clamp(4rem, 10vw, 10.375rem);
+    font-weight: bold;
+    letter-spacing: clamp(-0.5rem, -0.47vw, -0.46875rem);
+    line-height: clamp(1rem, 15vw, 8.4375rem);
+}
+
+.contact-page .green-dot {
+    width: 1.25rem;
+    height: 1.25rem;
+    background-color: var(--third-color);
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 0.625rem;
+}
+
+.contact-page .green-square {
+    width: 5rem;
+    height: 5rem;
+    background-color: var(--third-color);
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 0.625rem;
+}
+
+.contact-page .form-control {
+    background-color: #222;
+    border: none;
+    color: #fff;
+    padding: 1.625rem 1.25rem;
+}
+
+.contact-page .form-control::placeholder {
+    color: #666;
+}
+
+.contact-page .form-control:focus {
+    background-color: #222;
+    color: #fff;
+    box-shadow: 0 0 0 0.25rem rgba(152, 255, 152, 0.25);
+}
+
+.contact-page .btn-submit {
+    background-color: #fff;
+    color: #000;
+    border: none;
+    width: 100%;
+    padding: 1.25rem 1.25rem;
+    font-weight: 700;
+    font-size: clamp(1rem, 2vw + 1px, 2rem);
+}
+
+.contact-page .btn-submit:hover {
+    color: #000;
+    background-color: var(--third-color);
+}
+
+.contact-page label {
+    display: flex;
+    width: 100%;
+    font-size: clamp(1.375rem, 2vw + 1px, 1.375rem);
+    line-height: 1.6875rem;
+    font-family: var(--font_inter_tight);
 }

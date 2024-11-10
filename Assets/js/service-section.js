@@ -2,36 +2,46 @@ const services = [
     {
         id: 'web-development',
         title: 'Web Development',
-        description: 'Blending Aesthetic and Innovation, My UX/UI gives you a Top Notch Client.',
+        description: 'Crafting Dynamic, Scalable, and Future-Ready Websites That Stand Out.',
         startingCost: 2000,
         features: [
-            'Portfolio Highlights',
-            'Client Testimonials',
-            'Design Process',
+            'Custom Web Design',
+            'Responsive Design',
+            'SEO-Friendly Structure',
+            'Performance Optimization',
+            'Content Management',
+            'Ongoing Support',
         ],
         imageUrl: 'https://via.placeholder.com/400x300',
     },
     {
         id: 'web-design',
         title: 'Web Design',
-        description: 'Creating visually stunning and user-friendly websites that leave a lasting impression.',
+        description: 'Where Creativity Meets Functionality to Craft Visually Stunning Websites.',
         startingCost: 1500,
         features: [
-            'Custom Layouts',
-            'Responsive Design',
-            'UI/UX Optimization',
+            'Bespoke Visual Design',
+            'User-Centered Design',
+            'Mobile-First Design',
+            'Design Prototyping',
+            'High-Fidelity Mockups',
+            'Cross-Browser Compatibility',
+            'Branding Integration',
         ],
         imageUrl: 'https://via.placeholder.com/400x300',
     },
     {
         id: 'graphics-design',
         title: 'Graphics Design',
-        description: 'Crafting eye-catching visuals that communicate your brand message effectively.',
+        description: 'Transforming Ideas into Visual Masterpieces That Speak to Your Audience.',
         startingCost: 1000,
         features: [
-            'Logo Design',
-            'Brand Identity',
+            'Custom Logos & Branding',
             'Marketing Materials',
+            'Social Media Graphics',
+            'Web & App UI Elements',
+            'Illustrations & Icons',
+            'Print Design',
         ],
         imageUrl: 'https://via.placeholder.com/400x300',
     },
@@ -78,3 +88,6 @@ function initAccordion() {
 }
 
 document.addEventListener('DOMContentLoaded', initAccordion);
+
+
+
