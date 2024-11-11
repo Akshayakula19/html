@@ -73,11 +73,18 @@
         margin-left: 25px;
     }
 
+
+    .home p {
+        position: relative;
+    }
+
     .home p:before {
         width: var(--circle-size);
         height: var(--circle-size);
-        bottom: 55px;
-        right: 25px;
+        bottom: 0;
+        right: 0;
+        transform: translate(-15%, 90%);
+        position: absolute;
     }
 
     .rotating-text p {
@@ -86,6 +93,10 @@
 
 
 
+
+    .footer .brand-text {
+        transform: translateY(15%);
+    }
 
 
     .footer .green-circle {
@@ -209,6 +220,14 @@
         font-size: 0.8rem !important;
     }
 
+    .experience .subtitle {
+        margin-bottom: 1rem;
+    }
+
+
+
+
+
     .stacks h1 {
         font-size: 2.4rem !important;
     }
@@ -239,6 +258,43 @@
 
     header .social-container img {
         width: 2.6%;
+    }
+
+
+
+
+    /* CONTACT PAGE */
+
+    .contact-page .mb-4 {
+        margin-bottom: 1rem !important;
+    }
+
+    .contact-page .g-5,
+    .gy-5 {
+        --bs-gutter-y: 1rem;
+    }
+
+    .contact-page .mb-5 {
+        margin-bottom: 2rem !important;
+    }
+
+    .contact-page .form-control {
+        padding: 1.2rem 1.25rem;
+    }
+
+    .contact-page label {
+        font-size: clamp(1rem, 2vw + 1px, 1.375rem);
+    }
+
+    .contact-page .green-square {
+        position: absolute;
+        right: 10%;
+        top: 14%;
+        z-index: -1;
+    }
+
+    .contact-page h1 {
+        line-height: 3rem;
     }
 }
 

@@ -125,6 +125,7 @@ a {
     text-align: left;
     margin-top: -20%;
     position: relative;
+
 }
 
 .home h1:before {
@@ -141,6 +142,7 @@ a {
     font-size: 8rem;
     font-weight: 700;
     text-transform: uppercase;
+
 }
 
 .home p:before {
@@ -235,12 +237,15 @@ a {
     margin: 0;
     margin-top: -4rem;
     vertical-align: top;
+
+    background-color: red;
 }
 
 .rotating-text p .word {
     position: absolute;
     display: flex;
     opacity: 0;
+    clip-path: polygon(0 20%, 100% 20%, 100% 80%, 0 80%);
 }
 
 .rotating-text p .word .letter {
@@ -590,17 +595,21 @@ a {
 }
 
 .experience .position-title {
-    font-size: clamp(1rem, 1.5vw + 0.5rem, 1.2rem);
-    font-weight: 600;
-    margin-bottom: 0.25rem;
+    font-size: clamp(0.9rem, 1.5vw + 0.5rem, 1.2rem);
 }
 
 .experience .company-name {
-    margin-bottom: 1rem;
+    font-weight: 600;
+    margin: 0;
+    font-size: clamp(0.9rem, 1.5vw + 0.5rem, 1.5rem);
 }
 
 .experience .description {
     max-width: 600px;
+}
+
+.experience .small-date{
+    font-size: 0.8rem;
 }
 
 
@@ -949,11 +958,17 @@ a {
 /* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
 /* CONTACT PAGE */
 
+.contact-page {
+    /* padding-top: 5rem; */
+    padding: 5rem 0;
+}
+
 .contact-page h1 {
     font-size: clamp(4rem, 10vw, 10.375rem);
     font-weight: bold;
-    letter-spacing: clamp(-0.5rem, -0.47vw, -0.46875rem);
-    line-height: clamp(1rem, 15vw, 8.4375rem);
+    /* line-height: clamp(3rem, 15vw, 7rem); */
+    line-height: 7rem;
+    position: relative;
 }
 
 .contact-page .green-dot {
@@ -966,12 +981,15 @@ a {
 }
 
 .contact-page .green-square {
-    width: 5rem;
-    height: 5rem;
+    width: clamp(5rem, 10vw, 10rem);
+    height: clamp(5rem, 10vw, 10rem);
     background-color: var(--third-color);
     border-radius: 50%;
     display: inline-block;
-    margin-right: 0.625rem;
+    position: absolute;
+    top: 20%;
+    right: 37%;
+    z-index: -1;
 }
 
 .contact-page .form-control {
