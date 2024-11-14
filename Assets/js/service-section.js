@@ -12,7 +12,7 @@ const services = [
             'Content Management',
             'Ongoing Support',
         ],
-        imageUrl: 'https://via.placeholder.com/400x300',
+        imageUrl: 'Assets/Images/Works/01-DEVPULSE.jpg',
     },
     {
         id: 'web-design',
@@ -28,7 +28,7 @@ const services = [
             'Cross-Browser Compatibility',
             'Branding Integration',
         ],
-        imageUrl: 'https://via.placeholder.com/400x300',
+        imageUrl: 'Assets/Images/Works/02-EDISON.jpg',
     },
     {
         id: 'graphics-design',
@@ -43,7 +43,7 @@ const services = [
             'Illustrations & Icons',
             'Print Design',
         ],
-        imageUrl: 'https://via.placeholder.com/400x300',
+        imageUrl: 'Assets/Images/Works/The-last-rope-01.jpg',
     },
 ];
 

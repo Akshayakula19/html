@@ -8,6 +8,25 @@
 
 @media (max-width: 767px) {
 
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+        display: none;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        display: none;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        display: none;
+    }
+
     body,
     html {
         overflow-x: hidden !important;
@@ -111,8 +130,12 @@
         font-size: 2.5rem;
     }
 
+    .portfolio .portfolio-card {
+        height: 20rem;
+    }
+
     .portfolio .portfolio-image {
-        height: 18.75rem;
+        height: 15rem;
     }
 
     .portfolio .project-title {
@@ -295,6 +318,11 @@
 
     .contact-page h1 {
         line-height: 3rem;
+    }
+
+    .experience .grain {
+        width: 150%;
+        height: 150%;
     }
 }
 
