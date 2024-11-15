@@ -606,7 +606,6 @@ a {
 
 
 
-
 /* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
 /* EXPERIENCE SECTION */
 /* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
@@ -627,16 +626,14 @@ a {
 .experience .experience-item {
     padding: 1rem;
     margin-bottom: 1.5rem;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.02);
     border-radius: 10px;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     border: 1px solid rgba(255, 255, 255, 0.8);
-
     box-shadow: inset 0 0 20px grey;
-
 }
 
 .experience .grain {

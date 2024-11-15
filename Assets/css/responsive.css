@@ -207,6 +207,14 @@
         padding: 20px 20px 20px 0;
     }
 
+    .service .accordion-header button {
+        margin-left: 0;
+    }
+
+    .service .accordion-header button::before {
+        display: none;
+    }
+
 
 
 
