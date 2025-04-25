@@ -1,772 +1,377 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Charan Teja",
-      "url": "https://devkishan.vercel.app",
-      "sameAs": [
-        "https://www.linkedin.com/in/charan-jakkula/",
-        "https://x.com/kishan_anthony",
-        <!-- "https://www.facebook.com/anthony.kishan.official/"
-        "https://www.instagram.com/anthony.kishan/" -->
-      ],
-        "image": "https://devkishan.vercel.app/Assets/Images/profile-img.jpg",
-      "jobTitle": "Web Developer"
+
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Sai Akshay Akula | Portfolio</title>
+
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <style>
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body { font-family: 'Segoe UI', sans-serif; background: #f2f2f2; color: #333; }
+
+    nav {
+
+      background: #222; padding: 1em; position: sticky; top: 0; z-index: 10;
+
+      display: flex; justify-content: center; gap: 1.5em;
+
     }
+
+    nav a, .tabs-nav button {
+
+      color: #fff; background: transparent; border: none;
+
+      text-decoration: none; font-weight: bold; font-size: 1em;
+
+      cursor: pointer;
+
+    }
+
+    nav a:hover, .tabs-nav button:hover { color: #00bcd4; }
+
+    .tab { display: none; }
+
+    .tab.active { display: block; }
+
+    header {
+
+      background: #00bcd4; color: white; padding: 4em 1em; text-align: center;
+
+    }
+
+    header h1 { font-size: 3em; }
+
+    header img {
+
+      width: 120px; height: 120px; border-radius: 50%; object-fit: cover;
+
+      margin-top: 1em; border: 4px solid white;
+
+    }
+
+    section { padding: 4em 2em; max-width: 1000px; margin: auto; }
+
+    .section-title {
+
+      font-size: 2em; margin-bottom: 1em; border-bottom: 2px solid #00bcd4;
+
+    }
+
+    .tabs-nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 1em; margin-top: 2em; }
+
+    .tabs-nav button.active { color: #00bcd4; border-bottom: 2px solid #00bcd4; }
+
+    .projects {
+
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5em;
+
+    }
+
+    .card {
+
+      background: white; padding: 1em; border-radius: 8px;
+
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1); transition: transform 0.3s;
+
+      text-align: center;
+
+    }
+
+    .card:hover { transform: translateY(-5px); }
+
+    .card img { width: 100%; max-height: 180px; object-fit: cover; border-radius: 8px; margin-bottom: 0.5em; }
+
+    .contact {
+
+      background: #222; color: white; padding: 2em 1em;
+
+    }
+
+    .contact-form {
+
+      display: flex; flex-direction: column; gap: 1em;
+
+      max-width: 600px; margin: 2em auto;
+
+    }
+
+    .contact-form input, .contact-form textarea {
+
+      padding: 1em; font-size: 1em; border: none; border-radius: 5px;
+
+    }
+
+    .contact-form button {
+
+      background-color: #00bcd4; color: white; border: none;
+
+      padding: 0.75em; border-radius: 5px; cursor: pointer; font-size: 1em;
+
+    }
+
+    .contact-form button:hover { background-color: #0097a7; }
+
+    .skills-grid {
+
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 1.5em; text-align: center;
+
+    }
+
+    .skill-box {
+
+      background: white; padding: 1em; border-radius: 8px;
+
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1); transition: transform 0.3s;
+
+      display: flex; flex-direction: column; align-items: center;
+
+    }
+
+    .skill-box:hover { transform: translateY(-5px); }
+
+    .skill-icon img {
+
+      width: 40px; height: 40px; margin-bottom: 0.5em;
+
+    }
+
+    .skill-title { font-weight: bold; margin-bottom: 0.25em; }
+
+    .skill-percent { width: 100%; background: #ddd; border-radius: 5px; overflow: hidden; }
+
+    .skill-percent-inner { height: 10px; background: #00bcd4; }
+
+    footer { background: #00bcd4; color: white; text-align: center; padding: 1em; }
+
+  </style>
+
+  <script>
+
+    function toggleTab(tabId) {
+
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+
+      document.querySelector(`#${tabId}`).classList.add('active');
+
+      document.querySelectorAll('.tabs-nav button').forEach(btn => btn.classList.remove('active'));
+
+      event.target.classList.add('active');
+
+    }
+
   </script>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="msapplication-TileImage" content="https://devkishan.vercel.app/Assets/Images/thumbnail.jpg">
-    <meta name="description" content="Charan Teja is a web developer with expertise in front-end and back-end development. Check out my portfolio and blog.">
-    <meta name="keywords" content="Charan Teja, web developer, portfolio, front-end development, back-end development, PHP developer, python developer, software developer">
-    <meta property="og:title" content="Charan Teja - Web Developer & Aspiring Software Developer">
-    <meta property="og:description" content="Explore my portfolio and learn more about my work as a web developer.">
-    <meta property="og:image" itemprop="image"  content="https://devkishan.vercel.app/Assets/Images/tumb.png">
-    <meta property="og:image:type" content="image/jpg">
-    <meta property="og:url" content="https://devkishan.vercel.app">
-
-    <title>Jakkula Charan Teja</title>
-    <!-- BOOTSTRAP -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
-        integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <!-- GOOGLE FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-        rel="stylesheet">
-
-
-    <!-- FONT AWESOME -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <!-- CUSTOM CSS -->
-    <link rel="stylesheet" href="Assets/css/style.css">
-    <link rel="stylesheet" href="Assets/css/navbar.css">
-    <link rel="stylesheet" href="Assets/css/responsive.css">
 </head>
 
 <body>
-    <!-- <div id="loading" class="loading-overlay">
-        <div class="loader"><img src="Assets/Images/SignatureAnimationSpeed.gif" alt="" style="width: 100%;"></div>
+
+  <header>
+
+    <h1>Sai Akshay Akula</h1>
+
+    <p>Machine Learning Enthusiast | Developer | Tech Explorer</p>
+
+    <img src="Assets/Images/akshay.jpeg" alt="Profile Photo">
+
+    <div class="tabs-nav">
+
+      <button class="active" onclick="toggleTab('about')">About Me</button>
+
+      <button onclick="toggleTab('skills')">Skills</button>
+
+      <button onclick="toggleTab('projects')">Projects</button>
+
+      <button onclick="toggleTab('certificates')">Certificates</button>
+
+      <button onclick="toggleTab('education')">Education</button>
+
+      <button onclick="toggleTab('contact')">Contact</button>
+
     </div>
 
-    <div id="content" style="display: none;">
-       
-    </div> -->
+  </header>
 
 
 
-    <!-- <audio id="playAudio" src="play.mp3"></audio> -->
-    <div id="bodyTop"><img src="Assets/Images/Icons/chevron-up.svg" alt=""></div>
-    <div class="cursor"></div>
+  <section id="about" class="tab active">
 
+  <h2 class="section-title">About Me</h2>
 
-    <header id="header">
-        <div class="container">
-            <nav class="brand-time" style="display: flex; align-content: center;">
-                <div class="row" style="align-items: center; align-content: center;">
-                    <div class="col-6 col-lg-3"><a href="index.html"><img src="Assets/Images/tumb.png" alt=""
-                                style="width: 60%;"></a></div>
-                    <div class="col-lg-3">
-                        <p>Hyderabad, Telangana/&nbsp;</p>
-                        <p id="time"></p>
-                    </div>
-                    <div class="col-lg-3" style="text-align: right;">
-                        <a class="nav-item text-white" href="#works" style="margin-left: 4rem;">(WORKS)</a>
-                        <a class="nav-item ms-4 text-white" href="#service">(SERVICES)</a>
-                    </div>
-                    <div class="col-6 col-lg-3">
-                        <div class="toggle">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                        <div class="menu-items">
-                            <ul class="menu-links">
-                                <li><a class="menu-item" href="#works">WORKS</a></li>
-                                <li><a class="menu-item" href="#about">ABOUT</a></li>
-                                <li><a class="menu-item" href="#service">SERVICES</a></li>
-                                <li><a class="menu-item" href="#contact">CONTACT</a></li>
-                            </ul>
-                            <div class="social-container">
-                                <a href="https://github.com/JakkulaCharanTeja" class="social-icon"
-                                    target="_blank">GITHUB</a><img src="Assets/Images/Icons/arrow.svg" alt="">
-                                <a href="https://www.linkedin.com/in/charan-jakkula/" class="social-icon"
-                                    target="_blank">LINKEDIN</a><img src="Assets/Images/Icons/arrow.svg" alt="">
-                                <!-- <a href="https://www.fiverr.com/anthony_kishan/" class="social-icon"
-                                    target="_blank">FIVERR</a><img src="Assets/Images/Icons/arrow.svg" alt=""> -->
-                            </div>
-                        </div>
+  <p>I’m a passionate and driven Computer Science and Engineering undergraduate at Lovely Professional University. I specialize in Machine Learning, Artificial Intelligence, and Full Stack Development. With a hands-on approach to solving real-world problems, I thrive on building efficient and scalable software solutions.</p>
 
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </header>
+  <p>My journey in tech has been powered by curiosity, community, and continuous learning. I actively pursue certifications, contribute to open-source, and create impactful projects. I'm seeking opportunities where I can learn, collaborate, and innovate.</p>
 
+  <a href="https://chat.openai.com/share/7a9b0372-b8a2-4be4-88e4-15504029a520" download style="display:inline-block;margin-top:1em;background:#00bcd4;color:white;padding:0.5em 1em;text-decoration:none;border-radius:4px;">Download CV</a>
 
-    <main>
-        <!-- HOME SECTION START -->
-        <section class="home">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <img src="Assets/Images/tumb.png" alt="" style="width: 100%; mix-blend-mode: screen;">
-                        <div class="rotating-text">
-                            <h1>Web</h1>
-                            <p>
-                                <span class="word w-1">Designer</span>
-                                <span class="word w-2">Developer</span>
-                                <span class="word w-3">Enthusiast</span>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <img src="Assets/Images/Icons/process-icon-2.svg" alt="" style="width: 80%;">
-                    </div>
-                </div>
-                <div class="scroll-indicator">
-                    <svg width="30" height="30" viewBox="0 0 30 30">
-                        <path d="M15 5v20M7 17l8 8 8-8" stroke="#fff" fill="none" stroke-width="2" />
-                    </svg>
-                </div>
-            </div>
-        </section>
-        <!-- HOME SECTION END -->
+</section>
 
 
 
-        <!-- WORK SECTION START -->
-        <section id="works" class="portfolio">
-            <div class="container">
-                <div class="hero-section ">
-                    <div class="row align-items-center">
-                        <div class="col-lg-6">
-                            <h1 id="text-work">WORKS</h1>
-                        </div>
-                        <div class="col-lg-6">
-                            <span class="section-label">explore</span><br>
-                            <p class="description">
-                                Gorgeous design. Scroll-stopping content. Memorable
-                                campaigns.
-                                Development dripping with tech. The proof is in our projects.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+  <section id="skills" class="tab">
 
-                <div class="row portfolio-grid">
+    <h2 class="section-title">Skills</h2>
 
-                    <div class="col-md-6 portfolio-card">
-                        <div class="media">
-                            <img src="Assets/Images/Works/01-DEVPULSE.webp" alt="Blog Project" class="portfolio-image">
-                        </div>
-                        <div class="card-overlay">
-                            <h2 class="project-title">DevPulse</h2>
-                            <div class="project-details">
-                                <span>TECH NEWS & TUTORIALS BLOG</span>
-                                <span>(FULL STACK)</span>
-                                <span>[01]</span>
-                            </div>
-                        </div>
-                    </div>
+    <div class="skills-grid">
 
-                    <div class="col-md-6 portfolio-card">
-                        <div class="media">
-                            <img src="Assets/Images/Works/02-EDISON.webp" alt="Education Project"
-                                class="portfolio-image">
-                        </div>
-                        <div class="card-overlay">
-                            <h2 class="project-title">EDISON</h2>
-                            <div class="project-details">
-                                <span>ONLINE EDUCATION</span>
-                                <span>(BRANDING)</span>
-                                <span>[02]</span>
-                            </div>
-                        </div>
-                    </div>
+      <div class="skill-box"><div class="skill-icon"><img src="https://cdn-icons-png.flaticon.com/512/6132/6132222.png" alt="C++"></div><div class="skill-title">C++</div><div class="skill-percent"><div class="skill-percent-inner" style="width: 90%"></div></div></div>
 
-                    <div class="col-md-6 portfolio-card">
-                        <div class="media">
-                            <img src="Assets/Images/Works/02-LINKIN-PARK.webp" alt="Music Project"
-                                class="portfolio-image">
-                        </div>
-                        <div class="card-overlay">
-                            <h2 class="project-title">LINKIN PARK</h2>
-                            <div class="project-details">
-                                <span>MUSIC BAND</span>
-                                <span>(DEMO SITE)</span>
-                                <span>[03]</span>
-                            </div>
-                        </div>
-                    </div>
+      <div class="skill-box"><div class="skill-icon"><img src="https://cdn-icons-png.flaticon.com/512/226/226777.png" alt="Java"></div><div class="skill-title">Java</div><div class="skill-percent"><div class="skill-percent-inner" style="width: 80%"></div></div></div>
 
-                    <div class="col-md-6 portfolio-card">
-                        <div class="media">
-                            <img src="Assets/Images/Works/Alanzo12-min.gif" alt="Catering Project"
-                                class="portfolio-image">
-                        </div>
-                        <div class="card-overlay">
-                            <h2 class="project-title">ALANZO</h2>
-                            <div class="project-details">
-                                <span>CATERING</span>
-                                <span>(DEMO SITE)</span>
-                                <span>[04]</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- <div class="col-md-6 portfolio-card">
-                     <img src="12.jpg" alt="Panda Project" class="portfolio-image">
-                     <div class="card-overlay">
-                         <h2 class="project-title">PANDA</h2>
-                         <div class="project-details">
-                             <span>PANDA</span>
-                             <span>(BRANDING)</span>
-                             <span>[05]</span>
-                         </div>
-                     </div>
-                 </div> -->
-                    <!-- <div class="col-md-6 portfolio-card">
-                     <img src="12.jpg" alt="Panda Project" class="portfolio-image">
-                     <div class="card-overlay">
-                         <h2 class="project-title">PANDA</h2>
-                         <div class="project-details">
-                             <span>PANDA</span>
-                             <span>(BRANDING)</span>
-                             <span>[06]</span>
-                         </div>
-                     </div>
-                 </div> -->
-                </div>
-            </div>
-        </section>
-        <!-- WORK SECTION END -->
+      <div class="skill-box"><div class="skill-icon"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" alt="JavaScript"></div><div class="skill-title">JavaScript</div><div class="skill-percent"><div class="skill-percent-inner" style="width: 85%"></div></div></div>
 
+      <div class="skill-box"><div class="skill-icon"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" alt="Python"></div><div class="skill-title">Python</div><div class="skill-percent"><div class="skill-percent-inner" style="width: 88%"></div></div></div>
 
+      <div class="skill-box"><div class="skill-icon"><img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="HTML/CSS"></div><div class="skill-title">HTML/CSS</div><div class="skill-percent"><div class="skill-percent-inner" style="width: 80%"></div></div></div>
 
-        <!-- ABOUT SECTION START -->
-        <section id="about" class="about">
-            <div class="container">
-                <div class="row mb-4">
-                    <div class="col-md-8">
-                        <h1 id="text-about">ABOUT</h1>
-                        <h5 class="subtitle">WEB DEV PASSIONATE ABOUT CREATING <u class="underlined">MODERN WEB
-                                EXPERIENCES</u></h5>
-                    </div>
-                    <div class="col-md-4 text-md-end">
-                        <span class="section-label">let's work together</span><br>
-                    </div>
-                </div>
+      <div class="skill-box"><div class="skill-icon"><img src="https://cdn-icons-png.flaticon.com/512/919/919836.png" alt="Ubuntu"></div><div class="skill-title">Ubuntu</div><div class="skill-percent"><div class="skill-percent-inner" style="width: 70%"></div></div></div>
 
-                <div class="row g-5">
-                    <div class="col-md-6 mb-4 mb-md-0">
-                        <img src="Assets/Images/profile.jpeg" alt="Profile Image" class="profile-image">
-                        <a href="Assets/Images/finalcv.pdf" class="download-resume"
-                            download="KishanModhuCV">DOWNLOAD RESUME</a>
+      <div class="skill-box"><div class="skill-icon"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111432.png" alt="GitHub"></div><div class="skill-title">GitHub</div><div class="skill-percent"><div class="skill-percent-inner" style="width: 75%"></div></div></div>
 
-                        <span class="social-links">
-                            <a href="https://github.com/JakkulaCharanTeja" class="social-icon" aria-label="GitHub"
-                                target="_blank"><img src="Assets/Images/Icons/github.svg" alt="GitHub"></a>
-                            <a href="https://www.linkedin.com/in/charan-jakkula/" class="social-icon"
-                                aria-label="LinkedIn" target="_blank"><img src="Assets/Images/Icons/linkedin.svg"
-                                    alt="LinkedIn"></a>
-                            <!-- <a href="https://www.facebook.com/anthony.kishan.official/" class="social-icon"
-                             aria-label="facebook" target="_blank"><img src="Assets/Images/Icons/facebook.svg"
-                                 alt="Facebook"></a> -->
-                            <!-- <a href="https://www.fiverr.com/anthony_kishan/" class="social-icon" aria-label="fiverr"
-                                target="_blank"><img src="Assets/Images/Icons/fiverr.png" alt="Fiverr"></a> -->
-                        </span>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="mb-5">
-                            <h2 class="section-title">[ ABOUT ME ]</h2>
-                            <p>
-                                As a junior web developer, I bring fresh perspectives and modern development
-                                practices
-                                to every
-                                project.
-                                With a strong foundation in HTML, CSS, and JavaScript, I create responsive and
-                                user-friendly web
-                                experiences.
-                                I'm passionate about clean code, continuous learning, and staying up-to-date with
-                                the
-                                latest web
-                                technologies.
-                            </p>
-                        </div>
+      <div class="skill-box"><div class="skill-icon"><img src="https://cdn-icons-png.flaticon.com/512/919/919851.png" alt="React"></div><div class="skill-title">React</div><div class="skill-percent"><div class="skill-percent-inner" style="width: 70%"></div></div></div>
 
-                        <div class="mb-5">
-                            <h2 class="section-title">[ CERTIFICATES ]</h2>
-                            <div class="achievement-item">
-                                <a href="Assets/Images/Html.pdf" target="_blank" class="text-white">HTML, CSS, and Javascript for Web Developers</a>
-                                <span>2024</span>
-                            </div>
-                            <div class="achievement-item">
-                                <a href="Assets/Images/sever.pdf" target="_blank" class="text-white">Server side JavaScript with Node.js</a>
-                                <span>2024</span>
-                            </div>
-                            <div class="achievement-item">
-                                <a href="Assets/Images/D.pdf" target="_blank" class="text-white">Dynamic Programming, Greedy Algorithms</a>
-                                <span>2024</span>
-                            </div>
-                        </div>
+      <div class="skill-box"><div class="skill-icon"><img src="https://cdn-icons-png.flaticon.com/512/4248/4248443.png" alt="SQL"></div><div class="skill-title">SQL</div><div class="skill-percent"><div class="skill-percent-inner" style="width: 75%"></div></div></div>
 
-                        <div>
-                            <h2 class="section-title">[ MY MISSION ]</h2>
-                            <p>
-                                To create engaging, accessible, and performant web experiences that make a positive
-                                impact.
-                                I'm committed to writing clean, maintainable code and continuously expanding my
-                                skills
-                                in modern
-                                web development.
-                            </p>
-                        </div>
-
-                        <div class="text-end mt-4">
-                            <span>[ SINCE. 2021 ]</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- ABOUT SECTION END -->
-         <!-- Projects Section -->
-    <section id="projects" style="padding: 40px 0; background-color: #f9f9f9; color: #111;">
-        <div class="container">
-      <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 30px;">Projects</h2>
-      <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; gap: 40px;">
-        <div style="flex: 1 1 300px; max-width: 500px;">
-            <img src="Assets/Images/test.png" style="width: 300px;">
-
-        </div>
-        <div style="flex: 1 1 300px; max-width: 600px;">
-          <h3 style="font-size: 1.8rem;">Craft E-commerce Platform (GOCIP)</h3>
-          <p style="font-size: 1rem; line-height: 1.6; margin-top: 15px;">
-            This craft e-commerce website uses <strong>MongoDB</strong> for data storage, <strong>React</strong> for a responsive front end, and 
-            <strong>Node.js</strong> for server-side logic. It features secure user authentication with <strong>JWT tokens</strong> and hashed passwords, along with 
-            <strong>Formidable</strong> for form data handling and file uploads. <strong>Toast notifications</strong> enhance user experience by providing real-time feedback on actions.<br><br>
-            <strong>Tech:</strong> HTML, MongoDB, React, Node.js
-          </p>
-        </div>
-      </div>
     </div>
+
   </section>
-  
 
 
 
-        <!-- MARQUEE STACKS SECTION START -->
-        <section class="marquee-stacks">
-            <div class="container">
-                <div class="marquee">
-                    <div class="marquee-content">
-                        <img src="Assets/Images/stack-logos/html-1.svg" alt="HTML Logo" class="logo" />
-                        <img src="Assets/Images/stack-logos/css-3.svg" alt="CSS Logo" class="logo" />
-                        <img src="Assets/Images/stack-logos/bootstrap-5-1.svg" alt="BOOTSTRAP Logo" class="logo" />
-                        <img src="Assets/Images/stack-logos/javascript-1.svg" alt="JavaScript Logo" class="logo" />
-                        <img src="Assets/Images/stack-logos/python-5.svg" alt="Python Logo" class="logo" />
-                        <img src="Assets/Images/stack-logos/django.svg" alt="Django Logo" class="logo" />
-                        <img src="Assets/Images/stack-logos/laravel-2.svg" alt="LARAVEL Logo" class="logo" />
-                        <img src="Assets/Images/stack-logos/postgresql.svg" alt="POSTGRESQL Logo" class="logo" />
-                        <img src="Assets/Images/stack-logos/docker-4.svg" alt="DOCKER Logo" class="logo" />
-                        <img src="Assets/Images/stack-logos/arduino-1.svg" alt="ARDUINO Logo" class="logo" />
-                    </div>
-                    <div class="marquee-content">
-                        <img src="Assets/Images/stack-logos/html-1.svg" alt="HTML Logo" class="logo" />
-                        <img src="Assets/Images/stack-logos/css-3.svg" alt="CSS Logo" class="logo" />
-                        <img src="Assets/Images/stack-logos/bootstrap-5-1.svg" alt="BOOTSTRAP Logo" class="logo" />
-                        <img src="Assets/Images/stack-logos/javascript-1.svg" alt="JavaScript Logo" class="logo" />
-                        <img src="Assets/Images/stack-logos/python-5.svg" alt="Python Logo" class="logo" />
-                        <img src="Assets/Images/stack-logos/django.svg" alt="Django Logo" class="logo" />
-                        <img src="Assets/Images/stack-logos/laravel-2.svg" alt="LARAVEL Logo" class="logo" />
-                        <img src="Assets/Images/stack-logos/postgresql.svg" alt="POSTGRESQL Logo" class="logo" />
-                        <img src="Assets/Images/stack-logos/docker-4.svg" alt="DOCKER Logo" class="logo" />
-                        <img src="Assets/Images/stack-logos/arduino-1.svg" alt="ARDUINO Logo" class="logo" />
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- MARQUEE STACKS SECTION END -->
+  <section id="projects" class="tab">
+
+    <h2 class="section-title">Projects</h2>
+
+    <div class="projects">
+
+      <div class="card">
+
+        <img src="https://cdn-icons-png.flaticon.com/512/4712/4712035.png" alt="AI Chatbot">
+
+        <h3>AI Chat-Bot</h3>
+
+        <p>An intelligent chatbot built using T5 and BERT models to understand user intent and generate human-like responses.</p>
+
+      </div>
+
+      <div class="card">
+
+        <img src="https://cdn-icons-png.flaticon.com/512/2038/2038854.png" alt="Grocery Website">
+
+        <h3>Grocery E-commerce Website</h3>
+
+        <p>A responsive website with cart, payment, and user login functionality, developed using HTML, CSS, JS, and Firebase.</p>
+
+      </div>
+
+      <div class="card">
+
+        <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="Portfolio">
+
+        <h3>Portfolio Website</h3>
+
+        <p>This very website, showcasing my projects, certifications, and skills with an interactive and responsive layout.</p>
+
+      </div>
+
+    </div>
+
+  </section>
 
 
 
-        <!-- SERVICES SECTION START -->
-        <section id="service" class="service my-5">
-            <div class="container">
-                <div class="row">
-                    <div class="col-6">
-                        <h1 id="text-service">SERVICES</h1>
-                    </div>
-                    <div class="col-6">
-                        <span class="section-label">discover</span>
-                    </div>
-                </div>
+  <section id="certificates" class="tab">
 
-                <div id="services-accordion">
-                    <!-- Accordion items will be inserted here -->
-                </div>
-            </div>
-        </section>
-        <!-- SERVICES SECTION END -->
+    <h2 class="section-title">Certificates</h2>
 
+    <div class="projects">
 
+      <div class="card">
 
-        <section class="pattern1">
-        </section>
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" alt="Networking Certificate">
 
+        <h3>The Bits and Bytes of Computer Networking</h3>
 
-        <!-- EXPERIENCE SECTION START
-        <section class="experience">
-            <div class="container experience-section">
-                <div class="d-flex justify-content-between align-items-start">
-                    <div>
-                        <h1 id="text-experience">EXPERIENCE</h1>
-                        <p class="subtitle">SHOWCASING MY WEB DEVELOPMENT JOURNEY</p>
-                    </div>
-                    <span class="section-label">2022 - present</span>
-                </div>
+        <p>Coursera — <a href="https://coursera.org/share/afebdff0209aca41acbd6f3aa39390d8" target="_blank">View Certificate</a></p>
 
-                <div class="experience-items">
-                    <div class="blob blob1"></div>
-                    <div class="blob blob2"></div>
-                    <div class="blob blob3"></div>
-                    <div class="experience-item">
-                        <div class="grain"></div>
+      </div>
 
-                        <div class="row mb-3">
-                            <div class="col-8 d-flex align-items-center">
-                                <img src="Assets/Images/Experience-Company-Logo/euit-logo1.png" alt="Google"
-                                    class="company-logo">
-                                <div>
-                                    <p class="company-name">EUROPEAN IT INSTITUTE</p>
-                                    <h3 class="position-title">PYTHON DEVELOPMENT INTERN</h3>
-                                </div>
-                            </div>
-                            <div class="col-4 text-end">
-                                <span class="date ms-auto d-none d-md-inline">[ JULY/2024 - SEP/2024 ]</span>
-                                <span class="small-date d-lg-none me-2">[ JUL/21 - SEP/24 ]</span>
-                            </div>
-                        </div>
-                        <p class="description">Completed a 3-month internship focused on Python backend development
-                            using Django. Developed and deployed RESTful APIs with Docker, PostgreSQL, and Python
-                            OOP
-                            principles. Gained hands-on experience in full-stack development and collaborative team
-                            work.</p>
-                    </div>
+      <div class="card">
 
-                    <div class="experience-item">
-                        <div class="grain"></div>
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" alt="Big Data Certificate">
 
-                        <div class="row mb-3">
-                            <div class="col-8 d-flex align-items-center">
-                                <img src="Assets/Images/Experience-Company-Logo/euit-logo1.png" alt="Google"
-                                    class="company-logo">
-                                <div>
-                                    <p class="company-name">EUROPEAN IT INSTITUTE</p>
-                                    <h3 class="position-title">WEB DESIGN & DEVELOPMENT</h3>
-                                </div>
-                            </div>
-                            <div class="col-4 text-end">
-                                <span class="date ms-auto d-none d-md-inline">[ OCT/2024 - PRESENT ]</span>
-                                <span class="small-date d-lg-none me-2">[ OCT/21 - P/T ]</span>
-                            </div>
-                        </div>
-                        <p class="description">Currently enrolled in a 3-month advanced course on Web Design and
-                            Development under a State-Owned Company, Ministry of Finance (NHRDF). Focused on
-                            mastering
-                            web
-                            design, front-end and back-end development using HTML, CSS, JavaScript, PHP, Bootstrap,
-                            and
-                            Laravel. Preparing for freelancing with hands-on project experience and skill
-                            development.
-                        </p>
-                    </div>
+        <h3>Introduction to Big Data</h3>
 
-                    <div class="experience-item">
-                        <div class="grain"></div>
+        <p>Coursera — <a href="https://coursera.org/share/5205c09efbeeacb3c13920197b323d01" target="_blank">View Certificate</a></p>
 
-                        <div class="row mb-3">
-                            <div class="col-8 d-flex align-items-center">
-                                <img src="https://www.fiverr.com/favicon.ico" alt="Google" class="company-logo">
-                                <div>
-                                    <p class="company-name">FIVERR</p>
-                                    <h3 class="position-title">GRAPHIC DESIGNER</h3>
-                                </div>
-                            </div>
-                            <div class="col-4 text-end">
-                                <span class="date ms-auto d-none d-md-inline">[ SEP/2021 - PRESENT ]</span>
-                                <span class="small-date d-lg-none me-2">[ SEP/21 - P/T ]</span>
-                            </div>
-                        </div>
-                        <p class="description">Beginner-level graphic designer with a focus on illustration & UI
-                            designs.
-                            Proficient in Adobe Photoshop, Illustrator, and Canva for creating engaging visuals.
-                            Passionate about developing creative concepts and designs for various projects.</p>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-        <!-- EXPERIENCE SECTION END -->
+      </div>
+
+      <div class="card">
+
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" alt="Leadership Certificate">
+
+        <h3>Leadership through Social Influence</h3>
+
+        <p>Coursera — <a href="https://coursera.org/share/a8ebc63c1210284c72f0642ff72c9c86" target="_blank">View Certificate</a></p>
+
+      </div>
+
+    </div>
+
+  </section>
 
 
 
-        <section class="pattern">
-        </section>
+  <section id="education" class="tab">
+
+    <h2 class="section-title">Education</h2>
+
+    <p><strong>Lovely Professional University</strong><br />B.Tech in Computer Science and Engineering — CGPA: 5.86 (2022–2026)</p>
+
+    <p><strong>Alphores Junior College</strong><br />Intermediate in MPC — 69% (2020–2022)</p>
+
+    <p><strong>St. Johns High School</strong><br />Matriculation — 97% (2013–2020)</p>
+
+  </section>
 
 
 
-        <!-- STACKS SECTION START -->
-        <section class="stacks">
-            <div class="container stack-section">
-                <div class="d-flex justify-content-between align-items-start">
-                    <div>
-                        <h1 id="text-stack" class="stack-header">FAVOURITE<br>STACK</h1>
-                        <p class="subtitle">EXPLORE MY CURATED TOP DESIGN PICKS</p>
-                    </div>
-                    <span class="section-label">my skill</span>
+  <section id="contact" class="tab contact">
 
-                </div>
+    <h2 class="section-title" style="color:white">Contact</h2>
 
-                <div class="stack-items">
-                    <div class="stack-item">
-                        <div class="d-flex mb-3">
-                            <img src="Assets/Images/stack-logos/html-1.svg" alt="Html" class="tool-logo">
-                            <div>
-                                <h3 class="tool-name">HTML</h3>
-                                <p class="tool-category">Markup Language</p>
-                            </div>
-                            <span class="tool-percentage ms-auto">[ 95% ]</span>
-                        </div>
-                        <p class="description">HTML is the standard language for creating
-                            and structuring content on the web, forming the foundation of web pages by defining
-                            elements
-                            like text, images, links, and forms.</p>
-                    </div>
+    <form class="contact-form" onsubmit="event.preventDefault(); alert('Thank you for your message!');">
 
-                    <div class="stack-item">
-                        <div class="d-flex mb-3">
-                            <img src="Assets/Images/stack-logos/css-3.svg" alt="Css" class="tool-logo">
-                            <div>
-                                <h3 class="tool-name">css</h3>
-                                <p class="tool-category">style sheet Language</p>
-                            </div>
-                            <span class="tool-percentage ms-auto">[ 90% ]</span>
-                        </div>
-                        <p class="description">CSS is a stylesheet language used to define the
-                            presentation of HTML elements, enabling the design and layout of web pages with styles
-                            like
-                            colors, fonts, and spacing.</p>
-                    </div>
+      <input type="text" placeholder="Your Name" required>
 
-                    <div class="stack-item">
-                        <div class="d-flex mb-3">
-                            <img src="Assets/Images/stack-logos/bootstrap-5-1.svg" alt="Bootstrap" class="tool-logo">
-                            <div>
-                                <h3 class="tool-name">Bootstrap</h3>
-                                <p class="tool-category">CSS Framework</p>
-                            </div>
-                            <span class="tool-percentage ms-auto">[ 95% ]</span>
-                        </div>
-                        <p class="description">Bootstrap is a popular front-end framework for building responsive
-                            and
-                            mobile-first websites, providing pre-designed components and a flexible grid system for
-                            faster web development.</p>
-                    </div>
+      <input type="email" placeholder="Your Email" required>
 
-                    <div class="stack-item">
-                        <div class="d-flex mb-3">
-                            <img src="Assets/Images/stack-logos/javascript-1.svg" alt="JavaScript" class="tool-logo">
-                            <div>
-                                <h3 class="tool-name">JavaScript</h3>
-                                <p class="tool-category">Scripting Language</p>
-                            </div>
-                            <span class="tool-percentage ms-auto">[ 75% ]</span>
-                        </div>
-                        <p class="description">JavaScript is a versatile programming language that enables
-                            interactive
-                            and dynamic behavior on websites, allowing developers to manipulate content, control
-                            multimedia, and handle events in real-time.</p>
-                    </div>
+      <input type="text" placeholder="Phone Number">
 
-                    <div class="stack-item">
-                        <div class="d-flex mb-3">
-                            <img src="Assets/Images/stack-logos/python-5.svg" alt="Python" class="tool-logo">
-                            <div>
-                                <h3 class="tool-name">Python</h3>
-                                <p class="tool-category">Programming Language</p>
-                            </div>
-                            <span class="tool-percentage ms-auto">[ 92% ]</span>
-                        </div>
-                        <p class="description">Python is a high-level, versatile programming language known for its
-                            simplicity and readability, widely used in web development, data analysis, artificial
-                            intelligence, and automation.</p>
-                    </div>
+      <textarea rows="5" placeholder="Your Message" required></textarea>
 
-                    <div class="stack-item">
-                        <div class="d-flex mb-3">
-                            <img src="Assets/Images/stack-logos/django.svg" alt="django" class="tool-logo">
-                            <div>
-                                <h3 class="tool-name">Django</h3>
-                                <p class="tool-category">framework</p>
-                            </div>
-                            <span class="tool-percentage ms-auto">[ 85% ]</span>
-                        </div>
-                        <p class="description">Django is a high-level Python web framework that enables rapid
-                            development of secure and maintainable web applications, providing built-in features
-                            like
-                            authentication, database integration, and admin interfaces.</p>
-                    </div>
+      <button type="submit">Send Message</button>
 
-                    <div class="stack-item">
-                        <div class="d-flex mb-3">
-                            <img src="Assets/Images/stack-logos/postgresql.svg" alt="postgresql" class="tool-logo">
-                            <div>
-                                <h3 class="tool-name">postgresql</h3>
-                                <p class="tool-category">Database</p>
-                            </div>
-                            <span class="tool-percentage ms-auto">[ 85% ]</span>
-                        </div>
-                        <p class="description">PostgreSQL is a powerful, open-source relational database management
-                            system that supports advanced data types, complex queries, and high concurrency, making
-                            it
-                            ideal for scalable and high-performance applications.</p>
-                    </div>
+    </form>
 
-                    <div class="stack-item">
-                        <div class="d-flex mb-3">
-                            <img src="Assets/Images/stack-logos/docker-4.svg" alt="DOCKER" class="tool-logo">
-                            <div>
-                                <h3 class="tool-name">Docker</h3>
-                                <p class="tool-category">Container platform</p>
-                            </div>
-                            <span class="tool-percentage ms-auto">[ 65% ]</span>
-                        </div>
-                        <p class="description">Docker is a platform for developing, shipping, and running
-                            applications
-                            in containers, allowing developers to package software with all its dependencies for
-                            consistent deployment across different environments.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- STACKS SECTION END -->
+  </section>
 
 
 
-        <section class="pattern2">
-        </section>
+  <footer>
 
-<!-- 
-        TESTIMONIAL SECTION START -->
-        <!-- <section id="testimonial" class="testimonial">
-            <div class="container testimonial-section">
-                <h2 id="text-testimonial" class="text-center">TESTIMONIAL</h2>
-                <h1 class="section-title">What my Clients Say</h1>
-                <div class="testimonial-row mb-5" id="row1"></div>
-                <div class="testimonial-row" id="row2"></div>
-            </div>
-        </section> --> -->
-        <!-- TESTIMONAIL SECTION END
+    Made with ❤️ by Sai Akshay Akula | &copy; 2025
 
+  </footer>
 
-
-        <!-- FAQ SECTION START -->
-        <!-- <section id="faq" class="faq" style="height: 100vh;">
-         <div class="container">
-             <h1 id="text-faq">FAQ</h1>
-         </div>
-     </section> -->
-        <!-- FAQ SECTION END -->
-
-
-
-        <!-- CONTACT SECTION START -->
-        <section id="contact" class="contact">
-            <div class="container">
-                <div class="row align-items-center mb-5">
-                    <div class="col-md-9 text-center">
-                        <h1 class="main-heading">LET'S BUILD YOUR<br>WEB IDENTITY</h1>
-                        <h6 class="subtitle">"COLLABORATE WITH ME TO CRAFT EXCEPTIONAL
-                            DESIGNS<br>REFLECT YOUR UNIQUE VISION"</h6>
-                        <a href="contact.html" class="contact-btn">CONTACT NOW</a>
-                        <div class="social-container">
-                            <a href="https://github.com/JakkulaCharanTeja" class="social-icon"
-                                target="_blank">GITHUB</a><img src="Assets/Images/Icons/arrow.svg" alt="">
-                            <a href="https://www.linkedin.com/in/charan-jakkula/" class="social-icon"
-                                target="_blank">LINKEDIN</a><img src="Assets/Images/Icons/arrow.svg" alt="">
-                            <!-- <a href="https://www.fiverr.com/anthony_kishan/" class="social-icon"
-                                target="_blank">FIVERR</a><img src="Assets/Images/Icons/arrow.svg" alt=""> -->
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <img src="Assets/Images/Icons/process-icon-1.svg" alt="Designer Profile" class="profile-image">
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- CONTACT SECTION END -->
-    </main>
-
-
-    <!-- FOOTER SECTION START -->
-    <footer id="footer" class="footer">
-        <div class="container">
-            <div class="footer-section">
-                <div class="brand-container">
-                    <div class="brand-text">Charan</div>
-                    <div class="green-circle"></div>
-                </div>
-
-                <div class="container p-0">
-                    <div class="row footer-row justify-content-between align-items-center">
-                        <div class="col-auto">
-                            <div class="footer-text">© 2024 DESIGN</div>
-                        </div>
-                        <div class="col-auto">
-                            <div class="footer-text">Hyderabad, Telangana</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- FOOTER SECTION END -->
-
-
-
-
-
-
-
-    <!-- jquery js  -->
-    <script src="Assets/js/jquery.js"></script>
-
-    <!-- BOOTSTRAP -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"
-        integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-    <script src="https://unpkg.com/split-type"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
-
-    <script src="Assets/js/navbar.js"></script>
-    <script src="Assets/js/service-section.js"></script>
-    <script src="Assets/js/testimonial.js"></script>
-    <script src="Assets/js/app.js"></script>
 </body>
 
 </html>
